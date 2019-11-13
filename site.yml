@@ -4,19 +4,3 @@
 - hosts: all
   roles:
   - role: common
-
-- hosts: mongo_servers
-  roles:
-  - role: mongod
-
-- hosts: mongoc_servers
-  roles:
-  - role: mongoc
-
-- hosts: mongos_servers
-  roles:
-  - role: mongos
-
-- hosts: mongo_servers
-  tasks:
-  - include: roles/mongod/tasks/shards.yml
