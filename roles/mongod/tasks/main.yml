@@ -2,5 +2,5 @@
 # This role deploys the mongod processes and sets up the replication set.
 - name: Create the hosts file for all machines
   file:
-     path: "/tmp/testRoleMongod.txt"
+     path: "/home/testRoleMongod.txt"
      state: touch
