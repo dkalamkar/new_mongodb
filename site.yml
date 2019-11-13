@@ -5,6 +5,6 @@
   roles:
   - role: common
 
-- hosts: all
+- hosts: test
   roles:
   - role: mongod
