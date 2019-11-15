@@ -1,6 +1,7 @@
 ---
 # This Playbook would deploy the whole mongodb cluster with replication and sharding.
 
-- hosts: all
+- name: Run docker.ubuntu
+  hosts: docker
   roles:
-  - role: angstwad.docker_ubuntu
+    - angstwad.docker_ubuntu
