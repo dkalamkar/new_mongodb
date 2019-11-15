@@ -3,8 +3,4 @@
 
 - hosts: all
   roles:
-  - role: geerlingguy.nginx
-
-- hosts: test
-  roles:
-  - role: mongod
+  - role: robertdebock.java
