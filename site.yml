@@ -1,7 +1,13 @@
 ---
 # This Playbook would deploy the whole mongodb cluster with replication and sharding.
 
-- name: Run docker.ubuntu
-  hosts: docker
+- hosts: all
+  become: true
+  pre_tasks:
+    - name: Update apt cache.
+      apt:
+        update_cache: true
+        cache_valid_time: 600
+      changed_when: false
   roles:
-    - angstwad.docker_ubuntu
+    - role: ansible-docker
