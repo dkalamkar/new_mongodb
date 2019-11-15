@@ -1,13 +1,8 @@
 ---
 # This Playbook would deploy the whole mongodb cluster with replication and sharding.
 
-- hosts: all
-  become: true
-  pre_tasks:
-    - name: Update apt cache.
-      apt:
-        update_cache: true
-        cache_valid_time: 600
-      changed_when: false
+---
+- name: Run create file
+  hosts: all
   roles:
-    - role: calvinbui.ansible_docker
+    - dkalamkar.testrole
