@@ -3,4 +3,4 @@
 
 - hosts: all
   roles:
-  - role: robertdebock.java
+  - role: geerlingguy.java
